@@ -1,0 +1,31 @@
+@import "./variables";
+@import "./mixin";
+
+/* SHOWCASE */
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: $color-text;
+    font-size: 15px;
+    border: 1px solid $color-text; }
+    .btn:hover {
+      opacity: 0.9; }
+  
+  .showcase {
+    width: 100%;
+    height: 550px;
+    background: url("../img/fondo2.jpg") no-repeat center center/cover;
+    @include flexible(flex, column, center, center, flex-end);
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    color: $color-text; }
+    .showcase h2 {
+      margin-bottom: 10px; }
+    .showcase p {
+      margin-bottom: 10px; }
+    .showcase .btn {
+      margin-top: 20px; }

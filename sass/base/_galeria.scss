@@ -1,0 +1,15 @@
+@import "./variables";
+
+/* Galeria de Imágenes */
+.titulo {
+    font-size: 30px;
+    text-align: center;
+    color: $color-text; }
+  
+  .galeria {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center; }
+    .galeria img {
+      max-width: 400px;
+      padding: 1rem; }
