@@ -1,3 +1,5 @@
+let precioTotalCarrito = 0
+
 document.querySelector(".menu-btn").addEventListener("click", () => {
     document.querySelector(".nav-menu").classList.toggle("show");
   });
@@ -20,4 +22,21 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
          ultimaPalabra = prompt("Ingrese una palabra: ");
       }
     alert("Mensaje Final: " + mensajeFinal);
+  }
+
+  function agregarAlCarrito(precioAgregar){
+	precioTotalCarrito += precioAgregar;
+	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
+        if(divContenedor.classList.contains("d-ocultar")){
+		divContenedor.classList.remove("d-ocultar");
+        }
+	let btnId = document.getElementById("btnCarritoEfectuarCompra");
+	btnId.textContent = "Comprar $ " + precioTotalCarrito;
+  }
+
+  function cerrarDivCarrito(){
+	precioTotalCarrito = 0;
+   	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
+	divContenedor.classList.add("d-ocultar");
+	
   }
