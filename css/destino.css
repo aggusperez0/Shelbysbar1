@@ -341,3 +341,9 @@ hr {
     grid-template-columns: 1fr; }
   .footer-links .footer-container ul {
     text-align: center; } }
+
+    /* JavaScript */
+
+    .d-ocultar{
+      display: none;
+    }
