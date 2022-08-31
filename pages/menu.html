@@ -78,7 +78,7 @@
 		<div style="margin-bottom: 10px">
 			<span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 3000</span>
 		</div>
-		<button class="btn" onclick="agregarAlCarrito(3000)">Añadir al carrito</button>
+		<button class="btn" onclick="agregarAlCarrito('HamburguesaDoble', 3000)">Añadir al carrito</button>
 	</div>
   <div style="text-align:center">
     <div>
@@ -87,7 +87,7 @@
     <div style="margin-bottom: 10px">
 			<span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 3500</span>
 		</div>
-		<button class="btn" onclick="agregarAlCarrito(3500)">Añadir al carrito</button>
+		<button class="btn" onclick="agregarAlCarrito('HamburguesaBomba', 3500)">Añadir al carrito</button>
   </div>
   <div style="text-align:center">
     <div>
@@ -96,7 +96,7 @@
     <div style="margin-bottom: 10px">
 			<span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 2800</span>
 		</div>
-		<button class="btn" onclick="agregarAlCarrito(2800)">Añadir al carrito</button>
+		<button class="btn" onclick="agregarAlCarrito('HamburguesaCombo', 2800)">Añadir al carrito</button>
   </div>
 
     <!-- CARNE -->
@@ -107,7 +107,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 3800</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(3800)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('carneCostillar', 3800)">Añadir al carrito</button>
         </div>
         <div style="text-align:center">
           <div>
@@ -116,7 +116,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 4000</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(4000)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('carneTabla', 4000)">Añadir al carrito</button>
         </div>
         <div style="text-align:center">
           <div>
@@ -125,7 +125,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 3000</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(3000)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('carneBife', 3000)">Añadir al carrito</button>
         </div>
 
         <!-- PIZZAS -->
@@ -136,7 +136,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 2200</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(2200)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('pizzaNapolitana', 2200)">Añadir al carrito</button>
         </div>
         <div style="text-align:center">
           <div>
@@ -145,7 +145,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 2400</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(2400)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('pizzaLonganiza', 2400)">Añadir al carrito</button>
         </div>
         <div style="text-align:center">
           <div>
@@ -154,7 +154,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 1800</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(1800)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('pizzaMuzzarella', 1800)">Añadir al carrito</button>
         </div>
 
         <!-- PICADAS -->
@@ -165,7 +165,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 3500</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(3500)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('picadaFiambre', 3500)">Añadir al carrito</button>
         </div>
         <div style="text-align:center">
           <div>
@@ -174,7 +174,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 3900</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(3900)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('picadaMar', 3900)">Añadir al carrito</button>
         </div>
         <div style="text-align:center">
           <div>
@@ -183,7 +183,7 @@
           <div style="margin-bottom: 10px">
             <span style="font-weight: bolder;color: #ddadad;font-size: 22px;">$ 3300</span>
           </div>
-          <button class="btn" onclick="agregarAlCarrito(3300)">Añadir al carrito</button>
+          <button class="btn" onclick="agregarAlCarrito('picadaParrilla', 3300)">Añadir al carrito</button>
         </div>
     </div>
 
@@ -213,7 +213,7 @@
     </section>
   </div>
   <div id="divCarritoEfectuarCompra" class="d-ocultar" style="position: fixed;z-index: 99;bottom: 0px;width: 100%;text-align: center; background-color: #19152070;">
-	<button id="btnCarritoEfectuarCompra" class="btn" style="margin-top: 10px;margin-bottom: 10px;">Comprar</button>
+	<button id="btnCarritoEfectuarCompra" class="btn" onclick="realizarCompra()" style="margin-top: 10px;margin-bottom: 10px;">Comprar</button>
 	<span onclick="cerrarDivCarrito()" style="float: right;color: white;margin-right: 5px;">x</span>
   </div>
   <!-- Footer -->

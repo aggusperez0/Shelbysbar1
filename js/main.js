@@ -1,3 +1,14 @@
+class Productos {
+  constructor (nombre, precio) {
+    this.nombre = nombre;
+    this.precio = parseFloat(precio);
+  }
+}
+
+//Declaramos un array de productos para almacenar objetos
+
+const productos = [];
+
 let precioTotalCarrito = 0
 
 document.querySelector(".menu-btn").addEventListener("click", () => {
@@ -24,7 +35,8 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
     alert("Mensaje Final: " + mensajeFinal);
   }
 
-  function agregarAlCarrito(precioAgregar){
+  function agregarAlCarrito(productoNombre, precioAgregar){
+    productos.push(new Productos(productoNombre, precioAgregar));
 	precioTotalCarrito += precioAgregar;
 	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
         if(divContenedor.classList.contains("d-ocultar")){
@@ -38,5 +50,12 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
 	precioTotalCarrito = 0;
    	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
 	divContenedor.classList.add("d-ocultar");
-	
+  }
+
+  function realizarCompra() {
+    let mensaje = "";
+    for(const producto in productos){
+      mensaje += producto.nombre + " = " + producto.precio + "\n";
+    }
+    alert("Se realizo su compra con exito!!");
   }
