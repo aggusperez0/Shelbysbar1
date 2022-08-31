@@ -7,7 +7,7 @@ class Productos {
 
 //Declaramos un array de productos para almacenar objetos
 
-const productos = [];
+let productos = [];
 
 let precioTotalCarrito = 0
 
@@ -48,14 +48,15 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
 
   function cerrarDivCarrito(){
 	precioTotalCarrito = 0;
+	productos = [];
    	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
 	divContenedor.classList.add("d-ocultar");
   }
 
   function realizarCompra() {
-    let mensaje = "";
-    for(const producto in productos){
+    let mensaje = "Se realizo la compra de los siguientes productos: \n";
+    for(const producto of productos){
       mensaje += producto.nombre + " = " + producto.precio + "\n";
     }
-    alert("Se realizo su compra con exito!!");
+    alert(mensaje);
   }
