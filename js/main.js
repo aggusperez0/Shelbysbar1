@@ -9,17 +9,6 @@ class Productos {
 
 let productos = [];
 
-let precioTotalCarrito = 0
-
-document.querySelector(".menu-btn").addEventListener("click", () => {
-    document.querySelector(".nav-menu").classList.toggle("show");
-  });
-  
-  ScrollReveal().reveal('.showcase');
-  ScrollReveal().reveal('.news-cards', { delay: 500 });
-  ScrollReveal().reveal('.cards-banner-one', { delay: 500 });
-  ScrollReveal().reveal('.cards-banner-two', { delay: 500 });
-
   function ConcatenarMensajes(){
     var mensajeFinal = "";
     var SePresionoEscape = true;
@@ -35,19 +24,26 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
     alert("Mensaje Final: " + mensajeFinal);
   }
 
+  function obtenerImporteTotalParcialCarrito(){
+	let importeTotalParcial = 0;
+	for(const producto of productos){
+		importeTotalParcial += producto.precio;
+         }
+	return importeTotalParcial;
+  } 
+
   function agregarAlCarrito(productoNombre, precioAgregar){
     productos.push(new Productos(productoNombre, precioAgregar));
-	precioTotalCarrito += precioAgregar;
 	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
         if(divContenedor.classList.contains("d-ocultar")){
 		divContenedor.classList.remove("d-ocultar");
         }
+	let importeTotalParcial = obtenerImporteTotalParcialCarrito();
 	let btnId = document.getElementById("btnCarritoEfectuarCompra");
-	btnId.textContent = "Comprar $ " + precioTotalCarrito;
+	btnId.textContent = "Comprar $ " + importeTotalParcial;
   }
 
   function cerrarDivCarrito(){
-	precioTotalCarrito = 0;
 	productos = [];
    	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
 	divContenedor.classList.add("d-ocultar");
