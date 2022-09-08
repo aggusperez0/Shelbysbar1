@@ -190,7 +190,7 @@ hr {
   margin: 0;
   padding: 1em; }
 
-.contact-form form button {
+.contact-form form .button {
   width: 100%;
   padding: .7em;
   border: none;
@@ -203,13 +203,13 @@ hr {
   text-transform: uppercase;
   padding: 1em; }
 
-.contact-form form button:hover {
+.contact-form form .button:hover {
   background: #d63031;
   color: #fff;
   transition: background-color 1s ease-out;
   outline: 0; }
 
-.contact-form form button:focus {
+.contact-form form .button:focus {
   background: #d63031;
   color: #fff;
   transition: background-color 1s ease-out;
