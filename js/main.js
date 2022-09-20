@@ -48,11 +48,17 @@ let productos = [];
    	let divContenedor = document.getElementById("divCarritoEfectuarCompra");
 	divContenedor.classList.add("d-ocultar");
   }
-
+  function obtenerTotalAPagarClienteVIP(totalAPagar){
+    return  totalAPagar - (totalAPagar * 0.25);
+  }
   function realizarCompra() {
+    let esClienteVip = true;
+    let totalAPagar = obtenerImporteTotalParcialCarrito();
     let mensaje = "Se realizo la compra de los siguientes productos: \n";
     for(const producto of productos){
       mensaje += producto.nombre + " = " + producto.precio + "\n";
     }
+    mensaje += esClienteVip ? "Como es un cliente VIP se realizo un descuento del 25%.\n Total a pagar: $" + obtenerTotalAPagarClienteVIP(totalAPagar) : "Total a pagar: $" + totalAPagar;
     alert(mensaje);
+    cerrarDivCarrito();
   }
