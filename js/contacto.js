@@ -5,7 +5,11 @@ formulario.addEventListener('submit', function(e){
   let mail = document.getElementById('email-form').value;
   console.log(mail);
   if(mail == ""){
-    alert("Introduzca un correo electronico");
+    Swal.fire({
+      icon: 'error',
+      title:'Oops...',
+      text: 'Indique un correo electronico',
+    });
   }
 })
 
