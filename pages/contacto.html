@@ -73,7 +73,7 @@
         <div class="contact-wrapper">
           <div class="contact-form">
             <h3 class="title">Contactanos</h3>
-            <form action="" id="form">
+            <form action="https://formspree.io/f/mwkzojqr" id="form" method="POST">
               <p>
                 <label>Nombre</label>
                 <input type="text" name="Nombre" placeholder="Ingrese su Nombre" id="name">
@@ -88,13 +88,13 @@
               </p>
               <p>
                 <label>Telefono</label>
-                <input type="tel" name="phone" placeholder="Ingrese su Numero">
+                <input type="tel" name="phone" placeholder="Ingrese su Numero" id="telefono">
               </p>
               <p class="block">
                 <label>Deja tu mensaje</label>
-                <textarea name="Mensaje" rows="4" placeholder="Dejenos su Mensaje.."></textarea>
+                <textarea name="Mensaje" rows="4" placeholder="Dejenos su Mensaje.." id="msj"></textarea>
               </p>
-              <button onclick="Enviar()" class="button">Enviar</button>
+              <button onclick="Enviar()" class="button" id="Enviar">Enviar</button>
             </form>
           </div>
         </div>
@@ -159,6 +159,7 @@
   <script src="../js/main.js"></script>
   <script src="../js/contacto.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/form.js"></script>
 </body>
 
 </html>
